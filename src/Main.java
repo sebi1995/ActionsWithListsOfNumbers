@@ -1,6 +1,6 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new Test_if_sum_in_a_list_is_there();
     }
 }
