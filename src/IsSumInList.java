@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Test_if_sum_in_a_list_is_there {
+public class IsSumInList {
 
-    Test_if_sum_in_a_list_is_there() {
+    IsSumInList() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("How big is the list?");
@@ -28,14 +28,14 @@ public class Test_if_sum_in_a_list_is_there {
 
     private static boolean testTheOrderedArray(ArrayList<Integer> arrayList, int number, int a, int b) {
         int test = arrayList.get(a) + arrayList.get(b);
-        while (true) {
-            if (a == b) {
-                return false;
-            } else if (test == number) {
-                return true;
-            } else if (test > number) {
-                return testTheOrderedArray(arrayList, number, a, --b);
-            } else return testTheOrderedArray(arrayList, number, ++a, b);
-        }
+
+        if (a == b) {
+            return false;
+        } else if (test == number) {
+            return true;
+        } else if (test > number) {
+            return testTheOrderedArray(arrayList, number, a, --b);
+        } else return testTheOrderedArray(arrayList, number, ++a, b);
+
     }
 }
